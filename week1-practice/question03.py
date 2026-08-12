@@ -20,18 +20,11 @@ if course_name in courses:
 else:
     print("Course not found.")
 
-# Total enrollments
 total_enrollments = sum(courses.values())
-
-# Course with highest enrollment
 highest_course = max(courses, key=courses.get)
-
-# Course with lowest enrollment
 lowest_course = min(courses, key=courses.get)
 
-# Courses having more than 20 students
 more_than_20 = set()
-
 for course, enrollment in courses.items():
     if enrollment > 20:
         more_than_20.add(course)
