@@ -1,5 +1,3 @@
-# Employee Salary Calculator using a Default Arguments
-
 def calculate_salary(basic_salary, bonus_percentage=5):
     bonus_amount = basic_salary * bonus_percentage / 100
     final_salary = basic_salary + bonus_amount
@@ -7,19 +5,21 @@ def calculate_salary(basic_salary, bonus_percentage=5):
     return bonus_amount, final_salary
 
 
-employee_name = input()
-basic_salary = int(input())
+employee_name = input("Enter employee name: ")
+basic_salary = int(input("Enter basic salary: "))
 
-special_bonus = input()
+special_bonus = input("Does the employee have a special bonus? ")
 
-if special_bonus == "yes" or special_bonus == "Yes" or special_bonus == "Yes":
-    bonus_percentage = int(input())
-    bonus_amount, final_salary = calculate_salary(basic_salary, bonus_percentage)
+if special_bonus.strip().lower() == "yes":
+    bonus_percentage = int(input("Enter bonus percentage: "))
+    bonus_amount, final_salary = calculate_salary(
+        basic_salary, bonus_percentage
+    )
 else:
     bonus_percentage = 5
     bonus_amount, final_salary = calculate_salary(basic_salary)
 
-print("Employee Name:", employee_name)
+print("\nEmployee Name:", employee_name)
 print("Basic Salary:", basic_salary)
 print("Bonus Percentage:", bonus_percentage)
 print("Bonus Amount:", bonus_amount)
