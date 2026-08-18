@@ -1,5 +1,3 @@
-# Library Book Manager
-
 class LibraryBook:
     def __init__(self, title, author, price):
         self.title = title
@@ -11,25 +9,26 @@ class LibraryBook:
         if self.is_available:
             self.is_available = False
             return "Book borrowed successfully."
-        else:
-            return "Book is already borrowed."
+
+        return "Book is already borrowed."
 
     def return_book(self):
-        self.is_available = True
-        return "Book returned successfully."
+        if not self.is_available:
+            self.is_available = True
+            return "Book returned successfully."
+
+        return "Book is already available."
 
     def __str__(self):
-        if self.is_available:
-            status = "Available"
-        else:
-            status = "Borrowed"
+        status = "Available" if self.is_available else "Borrowed"
 
         return (
             f"Title: {self.title}\n"
             f"Author: {self.author}\n"
-            f"Price: {self.price}\n"
+            f"Price: ₹{self.price}\n"
             f"Status: {status}"
         )
+
 
 class LibraryManager:
     def __init__(self):
@@ -39,6 +38,10 @@ class LibraryManager:
         self.books.append(book)
 
     def display_books(self):
+        if not self.books:
+            print("No books in the library.")
+            return
+
         for book in self.books:
             print(book)
             print()
@@ -47,41 +50,61 @@ class LibraryManager:
         for book in self.books:
             if book.title.lower() == title.lower():
                 return book
+
         return None
+
+    def count_books(self):
+        available = 0
+        borrowed = 0
+
+        for book in self.books:
+            if book.is_available:
+                available += 1
+            else:
+                borrowed += 1
+
+        return available, borrowed
+
 
 # Create books
 book1 = LibraryBook("Python", "Rohit", 500)
 book2 = LibraryBook("Java", "Salman", 600)
 book3 = LibraryBook("SQL", "Vinay", 400)
 
+# Create library
 library = LibraryManager()
 
 library.add_book(book1)
 library.add_book(book2)
 library.add_book(book3)
 
+
+# Display books
 print("All Books:")
 library.display_books()
-title = input()
+
+
+# Search for a book
+title = input("Enter book title: ").strip()
 book = library.search_by_title(title)
 
 if book:
+    print("\nBook Found:")
     print(book)
-    choice = input("Do you want to borrow this book? ")
-    if choice.lower() == "yes":
+
+    choice = input("\nDo you want to borrow this book? ").strip().lower()
+
+    if choice == "yes":
         print(book.borrow_book())
+        print()
         print(book)
 else:
     print("Book not found.")
 
-available = 0
-borrowed = 0
 
-for book in library.books:
-    if book.is_available:
-        available += 1
-    else:
-        borrowed += 1
+# Display library statistics
+available, borrowed = library.count_books()
 
+print("\nLibrary Statistics:")
 print("Available Books:", available)
 print("Borrowed Books:", borrowed)
