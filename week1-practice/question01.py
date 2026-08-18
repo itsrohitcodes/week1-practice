@@ -1,30 +1,25 @@
-# Electricity Bill Calculator
+customer_name = input("Enter customer name: ")
+units = float(input("Enter units consumed: "))
 
-# Input
-customer_name = input()
-units = float(input())
-
-# First 100 Units = units * 2
-# Next 100 Units = units * 3
-# ABove 200 units = units * 5
-
-# bill calculator
+# Calculate electricity charge
 if units <= 100:
-    total_bill = units * 2
+    electricity_charge = units * 2
 elif units <= 200:
-    total_bill = (100 * 2) + ((units - 100) * 3)
+    electricity_charge = (100 * 2) + (units - 100) * 3
 else:
-    total_bill = (100 * 2) + (100 * 3) + ((units - 200) * 5)
+    electricity_charge = (100 * 2) + (100 * 3) + (units - 200) * 5
 
-if total_bill > 1000:
-    subcharge = total_bill * 0.05
-    final_bill = subcharge + total_bill
+# Calculate surcharge
+if electricity_charge > 1000:
+    surcharge = electricity_charge * 0.05
 else:
     surcharge = 0
-    final_bill = total_bill
 
+final_bill = electricity_charge + surcharge
+
+# Print bill
 print(f"Customer Name: {customer_name}")
-print(f"Units Consumed: {units}")
-print(f"Electricity Charge: {total_bill}")
-print(f"Surchagre: {surcharge}")
-print(f"Final Bill: {final_bill}")
+print(f"Units Consumed: {units:g}")
+print(f"Electricity Charge: ₹{electricity_charge:.2f}")
+print(f"Surcharge: ₹{surcharge:.2f}")
+print(f"Final Bill: ₹{final_bill:.2f}")
