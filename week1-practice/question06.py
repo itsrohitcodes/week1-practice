@@ -1,5 +1,3 @@
-# Function-Based Number List Analyzer
-
 def analyze_numbers(numbers):
     total = sum(numbers)
     average = total / len(numbers)
@@ -17,7 +15,6 @@ def analyze_numbers(numbers):
 
     return total, average, highest, lowest, even_count, odd_count
 
-
 def numbers_above_average(numbers, average):
     result = []
 
@@ -29,24 +26,23 @@ def numbers_above_average(numbers, average):
 
 
 # Take input from user
-numbers = input()
-numbers = numbers.split()
+numbers = [int(num) for num in input("Enter numbers separated by spaces: ").split()]
 
-for i in range(len(numbers)):
-    numbers[i] = int(numbers[i])
+if not numbers:
+    print("Please enter at least one number.")
+else:
+    # Analyze numbers
+    total, average, highest, lowest, even_count, odd_count = analyze_numbers(numbers)
 
-# Call the function
-total, average, highest, lowest, even_count, odd_count = analyze_numbers(numbers)
+    # Display results
+    print("Sum of Numbers:", total)
+    print("Average:", f"{average:.2f}")
+    print("Highest Number:", highest)
+    print("Lowest Number:", lowest)
+    print("Even Number Count:", even_count)
+    print("Odd Number Count:", odd_count)
 
-# Display results
-print("Sum of Numbers:", total)
-print("Average:", average)
-print("Highest Number:", highest)
-print("Lowest Number:", lowest)
-print("Even Number Count:", even_count)
-print("Odd Number Count:", odd_count)
+    # Find numbers above average
+    above_average = numbers_above_average(numbers, average)
 
-# Find numbers above average
-above_average = numbers_above_average(numbers, average)
-
-print("Numbers Above Average:", above_average)
+    print("Numbers Above Average:", above_average)
