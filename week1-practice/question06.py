@@ -25,24 +25,16 @@ def numbers_above_average(numbers, average):
     return result
 
 
-# Take input from user
-numbers = [int(num) for num in input("Enter numbers separated by spaces: ").split()]
+numbers = [int(num) for num in input().split()]
 
-if not numbers:
-    print("Please enter at least one number.")
-else:
-    # Analyze numbers
-    total, average, highest, lowest, even_count, odd_count = analyze_numbers(numbers)
+total, average, highest, lowest, even_count, odd_count = analyze_numbers(numbers)
 
-    # Display results
-    print("Sum of Numbers:", total)
-    print("Average:", f"{average:.2f}")
-    print("Highest Number:", highest)
-    print("Lowest Number:", lowest)
-    print("Even Number Count:", even_count)
-    print("Odd Number Count:", odd_count)
+print(f"Sum of Numbers: {total}")
+print(f"Average: {average:.2f}")
+print(f"Highest Number: {highest}")
+print(f"Lowest Number: {lowest}")
+print(f"Even Number Count: {even_count}")
+print(f"Odd Number Count: {odd_count}")
 
-    # Find numbers above average
-    above_average = numbers_above_average(numbers, average)
-
-    print("Numbers Above Average:", above_average)
+above_average = numbers_above_average(numbers, average)
+print(f"Numbers Above Average: {above_average}")
