@@ -1,8 +1,8 @@
-student_name = input("Enter student name: ")
+student_name = input()
 marks = []
 
 for _ in range(5):
-    mark = int(input("Enter mark: "))
+    mark = int(input())
     marks.append(mark)
 
 total_marks = sum(marks)
@@ -10,14 +10,14 @@ average_marks = total_marks / len(marks)
 highest_mark = max(marks)
 lowest_mark = min(marks)
 
-passed = 0
-failed = 0
+passed_subject = 0
+failed_subject = 0
 
 for mark in marks:
     if mark >= 40:
-        passed += 1
+        passed_subject += 1
     else:
-        failed += 1
+        failed_subject += 1
 
 if average_marks >= 90:
     grade = "A"
@@ -30,14 +30,14 @@ elif average_marks >= 40:
 else:
     grade = "F"
 
-print("\nStudent Name:", student_name)
-print("Total Marks:", total_marks)
-print("Average Marks:", f"{average_marks:.2f}")
-print("Highest Mark:", highest_mark)
-print("Lowest Mark:", lowest_mark)
-print("Subjects Passed:", passed)
-print("Subjects Failed:", failed)
-print("Final Grade:", grade)
+print(f"Student Name: {student_name}")
+print(f"Total Marks: {total_marks}")
+print(f"Average Marks: {average_marks:.2f}")
+print(f"Highest Mark: {highest_mark}")
+print(f"Lowest Mark: {lowest_mark}")
+print(f"Subjects Passed: {passed_subject}")
+print(f"Subjects Failed: {failed_subject}")
+print(f"Final Grade: {grade}")
 
 print("\nMarks greater than average:")
 for mark in marks:
