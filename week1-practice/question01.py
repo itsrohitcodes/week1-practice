@@ -1,5 +1,5 @@
-customer_name = input("Enter customer name: ")
-units = float(input("Enter units consumed: "))
+customer_name = input()
+units = int(input())
 
 # Calculate electricity charge
 if units <= 100:
@@ -19,7 +19,7 @@ final_bill = electricity_charge + surcharge
 
 # Print bill
 print(f"Customer Name: {customer_name}")
-print(f"Units Consumed: {units:g}")
-print(f"Electricity Charge: ₹{electricity_charge:.2f}")
-print(f"Surcharge: ₹{surcharge:.2f}")
-print(f"Final Bill: ₹{final_bill:.2f}")
+print(f"Units Consumed: {units}")
+print(f"Electricity Charge: {electricity_charge:.2f}")
+print(f"Surcharge: {surcharge:.2f}")
+print(f"Final Bill: {final_bill:.2f}")
