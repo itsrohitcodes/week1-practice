@@ -11,7 +11,7 @@ def count_words(sentence):
     return word_count, words
 
 
-sentence = input("Enter a sentence: ")
+sentence = input()
 
 word_frequency, words = count_words(sentence)
 
@@ -26,11 +26,11 @@ for word, frequency in word_frequency.items():
         highest_frequency = frequency
         most_frequent_word = word
 
-print("\nWord Frequencies:")
+print("Word Frequencies:")
 
 for word, frequency in word_frequency.items():
     print(word, ":", frequency)
 
-print("Total Number of Words:", total_words)
-print("Number of Unique Words:", unique_words)
-print("Most Frequent Word:", most_frequent_word)
+print(f"Total Number of Words: {total_words}")
+print(f"Number of Unique Words: {unique_words}")
+print(f"Most Frequent Word: {most_frequent_word}")
