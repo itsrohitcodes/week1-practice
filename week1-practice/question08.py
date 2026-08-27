@@ -11,7 +11,6 @@ def match_skills(student_skills, required_skills):
     return matched_skills, missing_skills, extra_skills, match_percentage
 
 
-# Take input from user
 student_skills = {skill.lower() for skill in input().split()}
 required_skills = {skill.lower() for skill in input().split()}
 
@@ -26,11 +25,10 @@ else:
     status = "Needs More Skills"
 
 
-# Display results
-print("Student Skills:", student_skills)
-print("Required Skills:", required_skills)
-print("Matched Skills:", matched_skills)
-print("Missing Skills:", missing_skills)
-print("Extra Skills:", extra_skills)
+print(f"Student Skills: {student_skills}")
+print(f"Required Skills: {required_skills}")
+print(f"Matched Skills: {matched_skills}")
+print(f"Missing Skills: {missing_skills}")
+print(f"Extra Skills: {extra_skills}")
 print(f"Match Percentage: {match_percentage:.2f}%")
-print("Status:", status)
+print(f"Status: {status}")
