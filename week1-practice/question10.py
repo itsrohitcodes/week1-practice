@@ -25,7 +25,7 @@ class LibraryBook:
         return (
             f"Title: {self.title}\n"
             f"Author: {self.author}\n"
-            f"Price: ₹{self.price}\n"
+            f"Price: {self.price:.2f}\n"
             f"Status: {status}"
         )
 
@@ -66,45 +66,37 @@ class LibraryManager:
         return available, borrowed
 
 
-# Create books
 book1 = LibraryBook("Python", "Rohit", 500)
 book2 = LibraryBook("Java", "Salman", 600)
 book3 = LibraryBook("SQL", "Vinay", 400)
 
-# Create library
 library = LibraryManager()
 
 library.add_book(book1)
 library.add_book(book2)
 library.add_book(book3)
 
-
-# Display books
-print("All Books:")
 library.display_books()
 
+title = input().strip()
 
-# Search for a book
-title = input("Enter book title: ").strip()
 book = library.search_by_title(title)
 
 if book:
-    print("\nBook Found:")
     print(book)
 
-    choice = input("\nDo you want to borrow this book? ").strip().lower()
+    choice = input().strip().lower()
 
     if choice == "yes":
         print(book.borrow_book())
-        print()
+
         print(book)
+
 else:
     print("Book not found.")
 
-
-# Display library statistics
 available, borrowed = library.count_books()
 
-print("\nLibrary Statistics:")
-print("Available Books:", available)
-print("Borrowed Books:", borrowed)
+print("\n----- Library Statistics -----")
+print(f"Available Books: {available}")
+print(f"Borrowed Books: {borrowed}")
