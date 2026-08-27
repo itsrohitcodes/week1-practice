@@ -11,16 +11,16 @@ def calculate_bill(unit_price, quantity):
     return total_amount, discount, final_amount
 
 
-product_name = input("Enter product name: ")
-unit_price = float(input("Enter price: "))
-quantity = int(input("Enter quantity: "))
+product_name = input()
+unit_price = int(input())
+quantity = int(input())
 
 total_amount, discount, final_amount = calculate_bill(unit_price, quantity)
 
-print("\n----- Shopping Bill -----")
-print("Product Name:", product_name)
+
+print(f"Product Name: {product_name}")
 print(f"Price: ₹{unit_price:.2f}")
-print("Quantity:", quantity)
+print(f"Quantity: {quantity}")
 print(f"Total Amount: ₹{total_amount:.2f}")
 print(f"Discount: ₹{discount:.2f}")
 print(f"Final Amount: ₹{final_amount:.2f}")
