@@ -1,3 +1,6 @@
+# QUESTION 01
+
+# Take input from the user
 customer_name = input()
 units = int(input())
 
@@ -10,7 +13,7 @@ else:
     electricity_charge = (100 * 2) + (100 * 3) + (units - 200) * 5
 
 # Calculate surcharge
-if electricity_charge > 1000:
+if electricity_charge >= 1000:
     surcharge = electricity_charge * 0.05
 else:
     surcharge = 0
