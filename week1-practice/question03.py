@@ -1,3 +1,6 @@
+# QUESTION 03
+
+# Dictionary of courses and their enrollments
 courses = {
     "Python": 25,
     "Java": 18,
@@ -5,7 +8,7 @@ courses = {
     "Web": 15
 }
 
-
+# Print course enrollments
 print("Course Enrollments:")
 for course, enrollment in courses.items():
     print(f"{course}: {enrollment}")
@@ -31,7 +34,7 @@ more_than_20 = [
     if enrollment > 20
 ]
 
-
+# Print the results
 print(f"Total Enrollments: {total_enrollments}")
 print(f"Course with Highest Enrollment: {highest_course}")
 print(f"Course with Lowest Enrollment: {lowest_course}")
