@@ -1,3 +1,6 @@
+# question 10
+
+# class book
 class LibraryBook:
     def __init__(self, title, author, price):
         self.title = title
@@ -19,7 +22,7 @@ class LibraryBook:
         status = "Available" if self.is_available else "Borrowed"
         return f"{self.title} | {self.author} | {self.price} | {status}"
 
-
+# library class
 class LibraryManager:
     def __init__(self):
         self.books = []
@@ -76,5 +79,6 @@ for book in library.books:
     else:
         borrowed += 1
 
+# Print the results
 print("Available books:", available)
 print("Borrowed books:", borrowed)
