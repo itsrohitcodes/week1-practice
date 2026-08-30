@@ -1,3 +1,6 @@
+# question 08
+
+# Function to match skills
 def match_skills(student_skills, required_skills):
     matched_skills = student_skills.intersection(required_skills)
     missing_skills = required_skills.difference(student_skills)
@@ -10,10 +13,11 @@ def match_skills(student_skills, required_skills):
 
     return matched_skills, missing_skills, extra_skills, match_percentage
 
-
+# Input the skills
 student_skills = {skill.lower() for skill in input().split()}
 required_skills = {skill.lower() for skill in input().split()}
 
+# Function call
 matched_skills, missing_skills, extra_skills, match_percentage = match_skills(
     student_skills,
     required_skills
@@ -24,7 +28,7 @@ if match_percentage >= 70:
 else:
     status = "Needs More Skills"
 
-
+# Print the results
 print(f"Student Skills: {student_skills}")
 print(f"Required Skills: {required_skills}")
 print(f"Matched Skills: {matched_skills}")
