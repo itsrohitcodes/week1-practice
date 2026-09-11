@@ -6,7 +6,7 @@ def majority_element(nums):
         if nums.count(num) > len(nums) // 2:
             return num
 
-
+# Majority Element
 if __name__ == "__main__":
     nums = list(map(int, input().split()))
     print(majority_element(nums))
