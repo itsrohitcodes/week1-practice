@@ -13,7 +13,7 @@ def is_happy_number(n):
         n = total
     return n == 1
 
-
+# Happy Number
 if __name__ == "__main__":
     n = int(input().strip())
     print(is_happy_number(n))
