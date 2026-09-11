@@ -12,7 +12,7 @@ def convert_to_column_title(columnNumber):
 
     return result
 
-
+# Excel Column Title
 if __name__ == "__main__":
     columnNumber = int(input().strip())
     print(convert_to_column_title(columnNumber))
