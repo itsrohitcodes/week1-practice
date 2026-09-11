@@ -13,7 +13,7 @@ def add_digits(num):
         num = total
     return num
 
-
+# Digital Root
 if __name__ == "__main__":
     num = int(input().strip())
     print(add_digits(num))
