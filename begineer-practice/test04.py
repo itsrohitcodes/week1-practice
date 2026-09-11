@@ -7,7 +7,7 @@ def contains_duplicate(nums):
             return True
     return False
 
-
+# Duplicate Elements
 if __name__ == "__main__":
     nums = list(map(int, input().split()))
     print(contains_duplicate(nums))
