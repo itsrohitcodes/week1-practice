@@ -10,7 +10,7 @@ def is_power_of_two(n):
 
     return n == 1
 
-
+# Power of Two
 if __name__ == "__main__":
     n = int(input().strip())
     print(is_power_of_two(n))
