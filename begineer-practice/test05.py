@@ -17,6 +17,7 @@ def are_isomorphic(s, t):
 
     return True
 
+
 # Isomorphic Strings
 if __name__ == "__main__":
     s = input().strip()
