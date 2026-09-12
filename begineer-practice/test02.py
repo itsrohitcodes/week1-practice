@@ -10,6 +10,7 @@ def is_anagram(s, t):
             return False
     return True
 
+
 # Anagrams Strings
 if __name__ == "__main__":
     s = input().strip()
