@@ -1,3 +1,4 @@
+# Python Begineer Bootcamp
 # Find the Majority Element in an array
 
 def majority_element(nums):
