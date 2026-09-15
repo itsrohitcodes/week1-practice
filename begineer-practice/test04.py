@@ -1,3 +1,4 @@
+# Python Begineer Bootcamp
 # Check for duplicate elements in an array
 
 def contains_duplicate(nums):
