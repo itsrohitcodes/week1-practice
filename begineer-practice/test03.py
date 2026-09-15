@@ -1,3 +1,4 @@
+# Python Begineer Bootcamp
 # Check if a number is a power of two
 
 def is_power_of_two(n):
