@@ -1,4 +1,5 @@
 # question 07
+# Salman Sir Assessment
 
 # Function to count words
 def count_words(sentence):
