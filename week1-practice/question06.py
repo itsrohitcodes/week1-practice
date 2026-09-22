@@ -1,4 +1,5 @@
 # question 06
+# Salman Sir Assessment
 
 # Function to analyze numbers
 def analyze_numbers(numbers):
