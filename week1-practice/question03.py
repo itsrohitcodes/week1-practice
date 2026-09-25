@@ -1,5 +1,5 @@
-# QUESTION 03
 # Salman Sir Assessment
+# QUESTION 03
 
 # Dictionary of courses and their enrollments
 courses = {
