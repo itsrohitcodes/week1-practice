@@ -1,5 +1,5 @@
-# QUESTION 02
 # Salman Sir Assessment
+# QUESTION 02
 
 # Take Input from the user
 student_name = input()
