@@ -1,6 +1,7 @@
 # Python Begineer Bootcamp
 # Check if two string are Isomorphic
 
+# Isomorphic Strings Logic
 def are_isomorphic(s, t):
     # write your logic here
     if len(s) != len(t):
