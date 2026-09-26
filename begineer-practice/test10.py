@@ -1,6 +1,7 @@
 # Python Begineer Bootcamp
 # Count set bits in a number
 
+# Set Bits Count Logic
 def count_set_bits(n):
     # write your logic here
     count = 0
