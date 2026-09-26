@@ -1,6 +1,7 @@
 # Python Begineer Bootcamp
 # Determine whether a number is happy
 
+# Happy Number Logic
 def is_happy_number(n):
     # write your logic here
     while n != 1 and n != 4:
