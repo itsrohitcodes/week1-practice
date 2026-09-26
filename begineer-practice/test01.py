@@ -1,6 +1,7 @@
 # Python Begineer Bootcamp
 # Find the Digital Root of a number
 
+# Digital Root Number Logic
 def add_digits(num):
     # write your logic here
     while num >= 10:
