@@ -1,6 +1,7 @@
 # Python Begineer Bootcamp
 # Find the Majority Element in an array
 
+# Majority Element Logic
 def majority_element(nums):
     # write your logic here
     for num in nums:
