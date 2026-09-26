@@ -1,6 +1,7 @@
 # Python Begineer Bootcamp
 # Check if a number is a power of two
 
+# Power of Two Number Logic
 def is_power_of_two(n):
     # write your logic here
     if n < 1:
