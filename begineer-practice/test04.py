@@ -1,6 +1,7 @@
 # Python Begineer Bootcamp
 # Check for duplicate elements in an array
 
+# Duplicate Elements Logic
 def contains_duplicate(nums):
     # write your logic here
     for num in nums:
