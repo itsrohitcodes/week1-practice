@@ -1,6 +1,7 @@
 # Python Begineer Bootcamp
 # Find the Unique Element in an array
 
+# Unique Element Logic
 def find_single_number(nums):
     # write your logic here
     for num in nums:
