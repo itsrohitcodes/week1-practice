@@ -1,6 +1,7 @@
 # Python Begineer Bootcamp
 # Check whether two strings are anagrams
 
+# Anagrams Strings Logic
 def is_anagram(s, t):
     # write your logic here
     if len(s) != len(t):
