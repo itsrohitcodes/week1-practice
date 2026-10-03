@@ -1,6 +1,7 @@
 # Salman Sir Assessment
 # QUESTION 03
 
+# write your logic here
 # Dictionary of courses and their enrollments
 courses = {
     "Python": 25,
