@@ -1,5 +1,5 @@
 # Salman Sir Assessment
-# question 09
+# QUESTION 09
 
 # write your logic here
 # class product
