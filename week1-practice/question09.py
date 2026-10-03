@@ -1,6 +1,7 @@
 # Salman Sir Assessment
 # question 09
 
+# write your logic here
 # class product
 class Product:
     # product details
