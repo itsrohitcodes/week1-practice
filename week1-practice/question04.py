@@ -1,7 +1,7 @@
 # Salman Sir Assessment
 # QUESTION 04
 
-# write your logic here
+
 # Function to calculate total amount, discount, and final amount
 def calculate_bill(unit_price, quantity):
     total_amount = unit_price * quantity
