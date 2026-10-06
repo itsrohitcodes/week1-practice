@@ -1,7 +1,7 @@
 # Salman Sir Assessment
 # QUESTION 08
 
-# write your logic here
+
 # Function to match skills
 def match_skills(student_skills, required_skills):
     matched_skills = student_skills.intersection(required_skills)
