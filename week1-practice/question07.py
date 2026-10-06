@@ -1,7 +1,7 @@
 # Salman Sir Assessment
 # QUESTION 07
 
-# write your logic here
+
 # Function to count words
 def count_words(sentence):
     words = sentence.lower().split()
