@@ -1,7 +1,7 @@
 # Salman Sir Assessment
 # QUESTION 02
 
-# write your logic here
+
 # Take Input from the user
 student_name = input()
 marks = []
