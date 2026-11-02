@@ -1,6 +1,7 @@
 # Kids with the Greatest Number of Chocolates
 
 def kids_with_greatest_chocolates(chocolates, extraChocolates):
+    # Write your code here
     lst = []
     maximum = max(chocolates)
 
