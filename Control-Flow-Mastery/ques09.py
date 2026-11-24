@@ -21,14 +21,11 @@ import sys
 data = sys.stdin.read().split()
 it = iter(data)
 
-
 def ni():
     return int(next(it))
 
-
 def ns():
     return next(it)
-
 
 num1 = ni()
 num2 = ni()
